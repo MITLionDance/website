@@ -7,7 +7,7 @@
 
 header {
     top: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 1;
 }
 
@@ -19,7 +19,14 @@ header {
     justify-content: left;
 }
 
+.nav-bar-left a {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+
 .nav-bar-left img {
+    width: auto;
     height: 100%;
 }
 
