@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scrollbar-gutter: stable;
+    overflow-x: hidden;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+    color: white;
+}
+
+/* for creating the background image */
+body::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 30%), url('/assets/images/background.jpg') center/cover no-repeat;
+    filter: brightness(65%);
+    z-index: -1;
+}
+
+main {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+main h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.main-button {
+    width: 50%;
+    max-width: 400px;
+    margin-top: 1.5vh;
+    padding: 1rem 2rem;
+
+    background-color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #A31F34;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background-color: lightgray;
+}

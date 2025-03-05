@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+/* for creating the background image */
+body::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 30%), url('/assets/images/background.jpg') center/cover no-repeat;
+    filter: brightness(40%);
+    z-index: -1;
+}
+
+main {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+main h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+main a {
+    color: rgb(255, 68, 68);
+}
+
+.text-container {
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    text-align: center;
+    padding: 2vh 2vw;
+    gap: 2vh;
+}
+
+.main-button {
+    width: 50%;
+    max-width: 400px;
+    margin-top: 1.5vh;
+    padding: 1rem 2rem;
+
+    background-color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #A31F34;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}

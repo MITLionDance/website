@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+/* for creating the background image */
+body::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 30%), url('/assets/images/background.jpg') center/cover no-repeat;
+    filter: brightness(50%);
+    z-index: -1;
+}
+
+main {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+}
+
+main h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* about us [start] */
+.about-us-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+}
+
+.about-us-container {
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2vw;
+    backdrop-filter: blur(10px);
+}
+
+.about-us-image img {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* aspect_ratio = width / height */
+    object-fit: cover;
+    border-radius: 2vw;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.about-us-text {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1.5vh 2vw;
+    gap: 1.5vh;
+}
+/* about us [end] */
+
+/* about general [start] */
+.about-general-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh
+}
+
+.about-general-container {
+    width: 80%;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2vw;
+    backdrop-filter: blur(10px);
+    margin-bottom: 4vh;
+}
+
+.about-general-image img {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* aspect_ratio = width / height */
+    object-fit: cover;
+    border-radius: 2vw;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.about-general-text-container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+
+    padding: 2vh 1.5vw;
+}
+
+.about-general-text-container-left {
+    width: 30%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    border-top: 1px solid #dee2e6;
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    border-bottom: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.about-general-text-container-left button {
+    padding: 1.5vh 2vw;
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.about-general-text-container-left button:hover {
+    filter: brightness(85%);
+    transition: 0.3s;
+}
+
+.about-general-text-container-right {
+    width: 70%;
+
+    padding-left: 2vw;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh
+}
+
+.about-general-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+
+    opacity: 0;
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.text-inactive {
+    display: none;
+}
+
+.text-active {
+    opacity: 1;
+    display: "";
+}
+
+.button-inactive {
+    background-color: white;
+}
+
+.button-active {
+    background-color: #ffcc5f;
+}
+/* about general [end] */
+
+/* for small screens, we want the button menu + the text to be on top of each other */
+@media (max-width: 768px) {
+    .about-general-text-container-left {
+        width: 50%;
+        height: auto;
+        min-width: 280px; /* a hardcoded magic number oops */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+        border-top: 1px solid #dee2e6;
+        border-left: 1px solid #dee2e6;
+        border-right: 1px solid #dee2e6;
+        border-bottom: none;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .about-general-text-container-right {
+        width: 100%;
+        min-width: 280px; /* a hardcoded magic number oops */
+
+        padding: 0 1vw;
+        text-align: left;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5vh
+    }
+
+    .about-general-text-container {
+        width: 100%;
+    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        gap: 1.5vh
+    }
+}

@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+/* for creating the background image */
+body::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 30%), url('/assets/images/background.jpg') center/cover no-repeat;
+    filter: brightness(20%);
+    z-index: -1;
+}
+
+main {
+    width: 100%;
+}
+
+main h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+    padding: 1vh 2vw;
+}
+
+.gallery-item {
+    width: 30vw;
+    min-width: 250px;
+    max-width: 400px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5vh;
+}
+
+.gallery-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* aspect_ratio = width / height */
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery-item a img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item p {
+    margin: 8px 0 5px;
+    font-size: 14px;
+    color: #ffffff;
+}
