@@ -20,7 +20,7 @@ header {
 }
 
 .nav-bar-left a {
-    width: 100%;
+    display: inline-block;
     height: 100%;
     text-align: left;
 }
