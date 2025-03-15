@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="icon" type="image/png" href="../assets/icons/logo.png">
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!--desktop nav bar-->
+        <div id="desktop-nav-bar">
+            <!--logo-->
+            <div class="nav-bar-left">
+                <a href="../">
+                    <img src="../assets/icons/logo.png" alt="MIT Lion Dance Logo">
+                </a>
+            </div>
+
+            <!--nav bar-->
+            <nav class="nav-bar-middle">
+                <a href="../">Home</a>
+                <a href="../about/" class="desktop-nav-active">About</a>
+                <a href="../our-team/">Our Team</a>
+                <a href="../performances/">Past Performances</a>
+                <a href="">Gallery</a>
+                <a href="../contact/">Contact Us</a>
+            </nav>
+
+            <!--social media links-->
+            <div class="nav-bar-right desktop-social-links">
+                <a href="https://instagram.com/mitliondance/" target="_blank" rel="noopener">
+                    <img src="../assets/icons/instagram.svg" alt="MIT Lion Dance Instagram Account" class="nav-icon">
+                </a>
+                <a href="https://youtube.com/@mitliondanceteam" target="_blank" rel="noopener">
+                    <img src="../assets/icons/yt.svg" alt="MIT Lion Dance Youtube Channel" class="nav-icon">
+                </a>
+                <a href="https://facebook.com/mitliondance" target="_blank" rel="noopener">
+                    <img src="../assets/icons/facebook.svg" alt="MIT Lion Dance Facebook Account" class="nav-icon">
+                </a>
+                <a href="mailto:lion-dance-exec@mit.edu" target="_blank" rel="noopener">
+                    <img src="../assets/icons/email.svg" alt="MIT Lion Dance Email Address" class="nav-icon">
+                </a>
+            </div>
+        </div>
+
+        <!--mobile nav bar-->
+        <div id="mobile-nav-bar">
+            <!--logo-->
+            <div class="nav-bar-left">
+                <a href="../">
+                    <img src="../assets/icons/logo.png" alt="MIT Lion Dance Logo" class="logo">
+                </a>
+            </div>
+
+            <!--mobile menu hamburger button-->
+            <div id="mobile-nav-hamburger-button" class="nav-bar-right">
+                <img src="../assets/icons/hamburger.svg" alt="Open Navigation Menu Button" onclick="hamburgerOpen()">
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-nav-menu">
+        <!--'x' button-->
+        <div class="mobile-nav-menu-top">
+            <img src="../assets/icons/close.svg" onclick="hamburgerClose()">
+        </div>
+
+        <!--links to other pages-->
+        <div class="moblie-nav-menu-middle">
+            <ul>
+                <li><a href="../">Home</a></li>
+                <li><a href="../our-team/">Our Team</a></li>
+                <li><a href="../performances/">Past Performances</a></li>
+                <li><a href="../gallery/">Gallery</a></li>
+                <li><a href="../contact/">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!--social media links-->
+        <div class="mobile-nav-menu-bottom bottom-bar">
+            <div class="mobile-social-links">
+                <a href="https://instagram.com/mitliondance/" target="_blank" rel="noopener">
+                    <img src="../assets/icons/instagram.svg" alt="MIT Lion Dance Instagram Account" class="nav-icon">
+                </a>
+                <a href="https://youtube.com/@mitliondanceteam" target="_blank" rel="noopener">
+                    <img src="../assets/icons/yt.svg" alt="MIT Lion Dance Youtube Channel" class="nav-icon">
+                </a>
+                <a href="https://facebook.com/mitliondance" target="_blank" rel="noopener">
+                    <img src="../assets/icons/facebook.svg" alt="MIT Lion Dance Facebook Account" class="nav-icon">
+                </a>
+                <a href="mailto:lion-dance-exec@mit.edu" target="_blank" rel="noopener">
+                    <img src="../assets/icons/email.svg" alt="MIT Lion Dance Email Address" class="nav-icon">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function hamburgerOpen() {
+            const mainContent = document.getElementById("main");
+            const mobileNavBar = document.getElementById("mobile-nav-bar");
+            const mobileNavMenu = document.getElementById("mobile-nav-menu");
+
+            mainContent.style.display = "none";
+            mobileNavBar.style.display = "none";
+            mobileNavMenu.style.display = "flex";
+        }
+
+        function hamburgerClose() {
+            const mainContent = document.getElementById("main");
+            const mobileNavBar = document.getElementById("mobile-nav-bar");
+            const mobileNavMenu = document.getElementById("mobile-nav-menu");
+
+            mainContent.style.display = "";
+            mobileNavBar.style.display = "";
+            mobileNavMenu.style.display = "none";
+        }
+
+        window.addEventListener("resize", () => {
+            hamburgerClose();
+        });
+    </script>
+
+
+
+    <main id="main">
+        <h1>Gallery</h1>
+        <div id="grid"></div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+    <script>
+        // TODO
+        // 1. add way to include videos (with lazy loading)
+        // 2. pictures can have different file extensions (e.g. jpg, png, webp, etc...)
+
+        const TOTAL_PICTURES = 14; // CHANGE ME
+
+        // creates the image elements for the page
+        let html = "";
+        for (let i = 0; i < TOTAL_PICTURES; i++) {
+            html += `<img src="../assets/gallery/images/${i}.webp" alt="Image ${i}">`
+        }
+        document.getElementById("grid").innerHTML = html;
+
+        // creates the masonry style layout for the images
+        let macy;
+
+        function createMacy() {
+            macy = Macy({
+                container: "#grid",
+                columns: 4,
+                margin: 10,
+                breakAt: { // maps pixels to number of columns (e.g. 3 columns for screens <= 1200px, 2 columns for screens <= 900px)
+                    1200: 3,
+                    900: 2,
+                    600: 1
+                }
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            createMacy();
+        });
+
+        window.addEventListener("resize", function () {
+            macy.remove();
+            createMacy();
+        });
+    </script>
+
+</body>
+</html>
