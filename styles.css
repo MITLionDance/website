@@ -226,7 +226,7 @@ header {
     justify-content: center;
     align-items: center;
 
-    flex: 6;
+    flex: 4;
 }
 
 .moblie-nav-menu-middle ul {
@@ -251,7 +251,7 @@ header {
     justify-content: center;
     align-items: center;
 
-    flex: 2;
+    flex: 1;
 }
 
 .mobile-social-links {
