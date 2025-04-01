@@ -14,27 +14,22 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: rgb(255, 255, 255);
-}
-
-/* for creating the background image */
-body::before {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    content: "";
-
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 30%), url('../assets/images/background.jpg') center/cover no-repeat;
-    filter: brightness(50%);
-    z-index: -1;
+    color: rgb(0, 0, 0);
+    gap: 2vh;
+    background-color: rgb(243, 244, 246);
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2vh;
+    margin-bottom: 4vh;
+}
+
+main h1 {
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 #grid {
