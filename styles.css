@@ -6,7 +6,7 @@
 }
 
 :root {
-    --nav-bar-height: 15vh;
+    --nav-bar-height: 13vh;
     --nav-icon-length: 30px;
     --desktop-nav-bar-padding: 1vh 2vw 1vh 0; /* extra padding on right due to how logo picture already has built-in padding */
     --mobile-nav-bar-padding: 1vh 4vw 1vh 0; /* extra padding on right due to how logo picture already has built-in padding */
