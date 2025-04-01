@@ -108,6 +108,7 @@ header {
 
     padding: var(--mobile-nav-bar-padding);
     height: var(--nav-bar-height);
+    background-color: #2B2B2B;
 }
 
 #mobile-nav-hamburger-button {
@@ -123,7 +124,8 @@ header {
 #mobile-nav-menu {
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
+    height: 100dvh;
+    background-color: #2B2B2B;
     z-index: 1;
 
     display: none;
@@ -164,6 +166,10 @@ header {
     justify-content: space-evenly;
 
     list-style: none;
+}
+
+.moblie-nav-menu-middle ul li {
+    text-align: center;
 }
 
 .moblie-nav-menu-middle li a {
