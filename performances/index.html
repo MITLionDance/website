@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../performances/styles.css">
 </head>
 <body>
-    <header>
+    <header id="header">
         <!--desktop nav bar-->
         <div id="desktop-nav-bar">
             <!--logo-->
@@ -101,21 +101,21 @@
     <script>
         function hamburgerOpen() {
             const mainContent = document.getElementById("main");
-            const mobileNavBar = document.getElementById("mobile-nav-bar");
+            const headerContent = document.getElementById("header");
             const mobileNavMenu = document.getElementById("mobile-nav-menu");
 
             mainContent.style.display = "none";
-            mobileNavBar.style.display = "none";
+            headerContent.style.display = "none";
             mobileNavMenu.style.display = "flex";
         }
 
         function hamburgerClose() {
             const mainContent = document.getElementById("main");
-            const mobileNavBar = document.getElementById("mobile-nav-bar");
+            const headerContent = document.getElementById("header");
             const mobileNavMenu = document.getElementById("mobile-nav-menu");
 
             mainContent.style.display = "";
-            mobileNavBar.style.display = "";
+            headerContent.style.display = "";
             mobileNavMenu.style.display = "none";
         }
 
