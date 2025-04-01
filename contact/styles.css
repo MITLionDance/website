@@ -58,6 +58,7 @@ section {
 }
 
 .text-container ul {
+    width: 80%;
     list-style-position: inside;
     display: flex;
     flex-direction: column;
@@ -83,4 +84,14 @@ section {
 
 .main-button:hover {
     background-color: #BF1912;
+}
+
+@media (max-width: 900px) {
+    section {
+        width: 90%;
+    }
+
+    .main-button {
+        width: 80%;
+    }
 }
