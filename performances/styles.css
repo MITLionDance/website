@@ -13,23 +13,11 @@ html {
 body {
     display: flex;
     flex-direction: column;
-
     text-align: center;
-    color: rgb(255, 255, 255);
-}
-
-/* for creating the background image */
-body::before {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    content: "";
-
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 30%), url('../assets/images/background.jpg') center/cover no-repeat;
-    filter: brightness(20%);
-    z-index: -1;
+    background-color: rgb(243, 244, 246);
+    color: rgb(0, 0, 0);
+    gap: 2vh;
+    margin-bottom: 4vh;
 }
 
 main {
@@ -46,8 +34,17 @@ main h1 {
     font-weight: bold;
 }
 
+main h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 .performance-intro {
     width: 80%;
+}
+
+.performance-intro p {
+    font-size: 1rem;
 }
 
 .gallery-container {
@@ -76,15 +73,25 @@ main h1 {
     object-fit: cover;
     border-radius: 15px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
 }
 
 .gallery-item a img:hover {
     transform: scale(1.05);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .gallery-item h3 {
     margin: 8px 0 5px;
-    font-size: 14px;
-    color: #ffffff;
+    font-size: 1rem;
+}
+
+@media (hover: none) {
+    .gallery-item a {
+        text-decoration: underline;
+    }
 }
