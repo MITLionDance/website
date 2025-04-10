@@ -136,9 +136,16 @@
     <script>
         const TOTAL_PICTURES = 105; // CHANGE ME
 
+        // create the random order
+        const allNumbers = [];
+        for (let i = 0; i < TOTAL_PICTURES; i++) {
+            allNumbers.push(i);
+        }
+        const shuffled = allNumbers.sort(() => Math.random() - 0.5);
+
         // creates the image elements for the page
         let html = "";
-        for (let i = 0; i < TOTAL_PICTURES; i++) {
+        for (const i of shuffled) {
             html += `<img src="../assets/gallery/images/${i}.webp" alt="Image ${i}">`
         }
         document.getElementById("grid").innerHTML = html;
@@ -149,11 +156,10 @@
         function createMacy() {
             macy = Macy({
                 container: "#grid",
-                columns: 4,
+                columns: 3,
                 margin: 10,
                 breakAt: { // maps pixels to number of columns (e.g. 3 columns for screens <= 1200px, 2 columns for screens <= 900px)
-                    1200: 3,
-                    900: 2,
+                    1200: 2,
                     600: 1
                 }
             });
