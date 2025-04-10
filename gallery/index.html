@@ -146,7 +146,7 @@
         // creates the image elements for the page
         let html = "";
         for (const i of shuffled) {
-            html += `<img src="../assets/gallery/images/${i}.webp" alt="Image ${i}">`
+            html += `<img src="../assets/gallery/images/${i}.webp" loading="lazy" alt="Image ${i}">`
         }
         document.getElementById("grid").innerHTML = html;
 
