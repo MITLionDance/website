@@ -40,7 +40,13 @@ h2 {
 
 h3 {
     padding-bottom: 1vh;
-    font-size: 1.5rem;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    text-align: left;
 }
 
 section {
@@ -70,7 +76,7 @@ section img {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    gap: 1vh 0;
+    gap: 1.5vh 0;
     flex: 1;
 }
 
