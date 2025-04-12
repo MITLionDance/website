@@ -78,6 +78,7 @@ header {
     height: var(--nav-bar-height);
 
     background-color: #2B2B2B;
+    text-align: center;
 }
 
 .desktop-social-links {
@@ -197,7 +198,7 @@ header {
 /* mobile nav bar [end] */
 
 /* to make the website responsive (switch mobile and desktop versions) */
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
     #desktop-nav-bar {
         display: none;
     }
@@ -207,7 +208,7 @@ header {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
     #mobile-nav-menu {
         display: none;
     }
