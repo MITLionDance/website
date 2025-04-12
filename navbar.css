@@ -181,6 +181,10 @@ header {
     text-decoration: none;
 }
 
+.moblie-nav-menu-middle li .mobile-nav-active {
+    color: #FF3B3B;
+}
+
 .mobile-nav-menu-bottom {
     display: flex;
     flex-direction: column;
