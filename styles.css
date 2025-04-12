@@ -45,24 +45,27 @@ body::before {
 
 main {
     position: absolute;
-    height: 100vh;
-    width: 100vw;
+    width: 100%;
+    top: 40vh;
+    transform: translateY(-50%);
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     z-index: 0;
 }
 
 main h1 {
-    font-size: 3rem;
+    width: 80%;
+    font-size: 5rem;
     font-weight: bold;
     color: rgb(255, 255, 255);
 }
 
 .main-button {
     width: 50%;
+    min-width: 180px;
     max-width: 300px;
     margin-top: 1.5vh;
     padding: 1rem 2rem;
@@ -271,6 +274,10 @@ header {
 
     #mobile-nav-bar {
         display: flex;
+    }
+
+    main h1 {
+        font-size: 4rem;
     }
 }
 
