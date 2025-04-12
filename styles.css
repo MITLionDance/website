@@ -197,6 +197,7 @@ header {
 
 /* mobile nav menu [start] */
 #mobile-nav-menu {
+    position: fixed;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
@@ -224,6 +225,7 @@ header {
 }
 
 .moblie-nav-menu-middle {
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -284,5 +286,12 @@ header {
 @media (min-width: 900px) {
     #mobile-nav-menu {
         display: none;
+    }
+}
+
+/* allow full mobile nav bar menu to be seen when mobile device is in landscape orientation */
+@media (max-height: 600px) {
+    .moblie-nav-menu-middle li a {
+        font-size: 2rem;
     }
 }
