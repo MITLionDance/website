@@ -252,6 +252,7 @@ header {
 .moblie-nav-menu-middle li a {
     color: white;
     font-size: 3rem;
+    line-height: 1.2;
     text-decoration: none;
 }
 
