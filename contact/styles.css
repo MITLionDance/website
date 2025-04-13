@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
     touch-action: manipulation;
 }
 
@@ -31,6 +31,7 @@ main {
 h1 {
     font-size: 3rem;
     font-weight: bold;
+    line-height: 1.2;
 }
 
 h2 {

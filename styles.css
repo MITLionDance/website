@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
     touch-action: manipulation;
 }
 
@@ -63,6 +63,7 @@ main h1 {
     width: 80%;
     font-size: 5rem;
     font-weight: bold;
+    line-height: 1.2;
     color: rgb(255, 255, 255);
 }
 
