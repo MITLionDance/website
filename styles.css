@@ -29,6 +29,7 @@ body {
     justify-content: start;
     text-align: center;
     color: white;
+    gap: 2vh;
 }
 
 /* for creating the background image */
@@ -47,10 +48,11 @@ body::before {
 }
 
 main {
-    position: absolute;
+    /* removed positioning below for announcement box */
+    /* position: absolute; */
+    /* top: 40vh; */
+    /* transform: translateY(-50%); */
     width: 100%;
-    top: 40vh;
-    transform: translateY(-50%);
 
     display: flex;
     flex-direction: column;
@@ -278,6 +280,28 @@ header {
 }
 /* mobile nav bar [end] */
 
+/* announcement box [start] */
+.announcement-container {
+    width: 60vw;
+    border-radius: 30px;
+    background-color: #9a0000;
+    padding: 1vh 1vw;
+}
+
+.announcement-container p a {
+    color: #ffd700;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.1rem;
+}
+/* announcement box [end] */
+
+
 /* to make the website responsive (switch mobile and desktop versions) */
 @media (max-width: 900px) {
     #desktop-nav-bar {
@@ -290,6 +314,10 @@ header {
 
     main h1 {
         font-size: 4rem;
+    }
+
+    .announcement-container {
+        width: 90vw;
     }
 }
 
@@ -305,3 +333,4 @@ header {
         font-size: 2rem;
     }
 }
+
