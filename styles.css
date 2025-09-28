@@ -49,9 +49,9 @@ body::before {
 
 main {
     /* removed positioning below for announcement box */
-    /* position: absolute; */
-    /* top: 40vh; */
-    /* transform: translateY(-50%); */
+    position: absolute;
+    top: 40vh;
+    transform: translateY(-50%);
     width: 100%;
 
     display: flex;
@@ -281,7 +281,7 @@ header {
 /* mobile nav bar [end] */
 
 /* announcement box [start] */
-.announcement-container {
+/* .announcement-container {
     width: 60vw;
     border-radius: 30px;
     background-color: #9a0000;
@@ -291,15 +291,15 @@ header {
 
 .announcement-container p a {
     color: #ffd700;
-}
+} */
 
-h2 {
+/* h2 {
     font-size: 2rem;
 }
 
 p {
     font-size: 1.1rem;
-}
+} */
 /* announcement box [end] */
 
 
@@ -317,9 +317,9 @@ p {
         font-size: 4rem;
     }
 
-    .announcement-container {
+    /* .announcement-container {
         width: 90vw;
-    }
+    } */
 }
 
 @media (min-width: 900px) {
@@ -334,4 +334,3 @@ p {
         font-size: 2rem;
     }
 }
-
