@@ -1,175 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Past Performances</title>
-    <link rel="icon" type="image/png" href="../assets/icons/logo.png">
-    <link rel="stylesheet" href="../navbar.css">
-    <link rel="stylesheet" href="../performances/styles.css">
+    <link rel="icon" type="image/png" href="../assets/icons/logo.png" />
+    <link rel="stylesheet" href="../navbar.css" />
+    <link rel="stylesheet" href="../performances/styles.css" />
     <!--import poppins font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!--for using the liondance.mit.edu domain-->
-    <link rel="canonical" href="https://liondance.mit.edu/performances/">
-</head>
-<body>
+    <link rel="canonical" href="https://liondance.mit.edu/performances/" />
+  </head>
+  <body>
     <header id="header">
-        <!--desktop nav bar-->
-        <div id="desktop-nav-bar">
-            <!--logo-->
-            <div class="nav-bar-left">
-                <a href="../">
-                    <img src="../assets/icons/logo.png" alt="MIT Lion Dance Logo">
-                </a>
-            </div>
-
-            <!--nav bar-->
-            <nav class="nav-bar-middle">
-                <a href="../">Home</a>
-                <a href="../about/">About</a>
-                <a href="../our-team/">Our Team</a>
-                <a href="" class="desktop-nav-active">Past Performances</a>
-                <a href="../gallery/">Gallery</a>
-                <a href="../contact/">Contact Us</a>
-            </nav>
-
-            <!--social media links-->
-            <div class="nav-bar-right desktop-social-links">
-                <a href="https://instagram.com/mitliondance/" target="_blank" rel="noopener">
-                    <img src="../assets/icons/instagram.svg" alt="MIT Lion Dance Instagram Account" class="nav-icon">
-                </a>
-                <a href="https://youtube.com/@mitliondanceteam" target="_blank" rel="noopener">
-                    <img src="../assets/icons/yt.svg" alt="MIT Lion Dance Youtube Channel" class="nav-icon">
-                </a>
-                <a href="https://facebook.com/mitliondance" target="_blank" rel="noopener">
-                    <img src="../assets/icons/facebook.svg" alt="MIT Lion Dance Facebook Account" class="nav-icon">
-                </a>
-                <a href="mailto:lion-dance-exec@mit.edu" target="_blank" rel="noopener">
-                    <img src="../assets/icons/email.svg" alt="MIT Lion Dance Email Address" class="nav-icon">
-                </a>
-            </div>
+      <!--desktop nav bar-->
+      <div id="desktop-nav-bar">
+        <!--logo-->
+        <div class="nav-bar-left">
+          <a href="../">
+            <img src="../assets/icons/logo.png" alt="MIT Lion Dance Logo" />
+          </a>
         </div>
 
-        <!--mobile nav bar-->
-        <div id="mobile-nav-bar">
-            <!--logo-->
-            <div class="nav-bar-left">
-                <a href="../">
-                    <img src="../assets/icons/logo.png" alt="MIT Lion Dance Logo" class="logo">
-                </a>
-            </div>
+        <!--nav bar-->
+        <nav class="nav-bar-middle">
+          <a href="../">Home</a>
+          <a href="../about/">About</a>
+          <a href="../our-team/">Our Team</a>
+          <a href="" class="desktop-nav-active">Past Performances</a>
+          <a href="../gallery/">Gallery</a>
+          <a href="../contact/">Contact Us</a>
+        </nav>
 
-            <!--mobile menu hamburger button-->
-            <div id="mobile-nav-hamburger-button" class="nav-bar-right">
-                <img src="../assets/icons/hamburger.svg" alt="Open Navigation Menu Button" onclick="hamburgerOpen()">
-            </div>
+        <!--social media links-->
+        <div class="nav-bar-right desktop-social-links">
+          <a
+            href="https://instagram.com/mitliondance/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="../assets/icons/instagram.svg"
+              alt="MIT Lion Dance Instagram Account"
+              class="nav-icon"
+            />
+          </a>
+          <a
+            href="https://youtube.com/@mitliondanceteam"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="../assets/icons/yt.svg"
+              alt="MIT Lion Dance Youtube Channel"
+              class="nav-icon"
+            />
+          </a>
+          <a
+            href="https://facebook.com/mitliondance"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="../assets/icons/facebook.svg"
+              alt="MIT Lion Dance Facebook Account"
+              class="nav-icon"
+            />
+          </a>
+          <a
+            href="mailto:lion-dance-exec@mit.edu"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="../assets/icons/email.svg"
+              alt="MIT Lion Dance Email Address"
+              class="nav-icon"
+            />
+          </a>
         </div>
+      </div>
+
+      <!--mobile nav bar-->
+      <div id="mobile-nav-bar">
+        <!--logo-->
+        <div class="nav-bar-left">
+          <a href="../">
+            <img
+              src="../assets/icons/logo.png"
+              alt="MIT Lion Dance Logo"
+              class="logo"
+            />
+          </a>
+        </div>
+
+        <!--mobile menu hamburger button-->
+        <div id="mobile-nav-hamburger-button" class="nav-bar-right">
+          <img
+            src="../assets/icons/hamburger.svg"
+            alt="Open Navigation Menu Button"
+            onclick="hamburgerOpen()"
+          />
+        </div>
+      </div>
     </header>
 
     <div id="mobile-nav-menu">
-        <!--'x' button-->
-        <div class="mobile-nav-menu-top">
-            <img src="../assets/icons/close.svg" onclick="hamburgerClose()">
-        </div>
+      <!--'x' button-->
+      <div class="mobile-nav-menu-top">
+        <img src="../assets/icons/close.svg" onclick="hamburgerClose()" />
+      </div>
 
-        <!--links to other pages-->
-        <div class="moblie-nav-menu-middle">
-            <ul>
-                <li><a href="../">Home</a></li>
-                <li><a href="../about/">About</a></li>
-                <li><a href="../our-team/">Our Team</a></li>
-                <li><a href="" class="mobile-nav-active">Past Performances</a></li>
-                <li><a href="../gallery/">Gallery</a></li>
-                <li><a href="../contact/">Contact Us</a></li>
-            </ul>
-        </div>
+      <!--links to other pages-->
+      <div class="moblie-nav-menu-middle">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../about/">About</a></li>
+          <li><a href="../our-team/">Our Team</a></li>
+          <li><a href="" class="mobile-nav-active">Past Performances</a></li>
+          <li><a href="../gallery/">Gallery</a></li>
+          <li><a href="../contact/">Contact Us</a></li>
+        </ul>
+      </div>
 
-        <!--social media links-->
-        <div class="mobile-nav-menu-bottom bottom-bar">
-            <div class="mobile-social-links">
-                <a href="https://instagram.com/mitliondance/" target="_blank" rel="noopener">
-                    <img src="../assets/icons/instagram.svg" alt="MIT Lion Dance Instagram Account" class="nav-icon">
-                </a>
-                <a href="https://youtube.com/@mitliondanceteam" target="_blank" rel="noopener">
-                    <img src="../assets/icons/yt.svg" alt="MIT Lion Dance Youtube Channel" class="nav-icon">
-                </a>
-                <a href="https://facebook.com/mitliondance" target="_blank" rel="noopener">
-                    <img src="../assets/icons/facebook.svg" alt="MIT Lion Dance Facebook Account" class="nav-icon">
-                </a>
-                <a href="mailto:lion-dance-exec@mit.edu" target="_blank" rel="noopener">
-                    <img src="../assets/icons/email.svg" alt="MIT Lion Dance Email Address" class="nav-icon">
-                </a>
-            </div>
+      <!--social media links-->
+      <div class="mobile-nav-menu-bottom bottom-bar">
+        <div class="mobile-social-links">
+          <a
+            href="https://instagram.com/mitliondance/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="../assets/icons/instagram.svg"
+              alt="MIT Lion Dance Instagram Account"
+              class="nav-icon"
+            />
+          </a>
+          <a
+            href="https://youtube.com/@mitliondanceteam"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="../assets/icons/yt.svg"
+              alt="MIT Lion Dance Youtube Channel"
+              class="nav-icon"
+            />
+          </a>
+          <a
+            href="https://facebook.com/mitliondance"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="../assets/icons/facebook.svg"
+              alt="MIT Lion Dance Facebook Account"
+              class="nav-icon"
+            />
+          </a>
+          <a
+            href="mailto:lion-dance-exec@mit.edu"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="../assets/icons/email.svg"
+              alt="MIT Lion Dance Email Address"
+              class="nav-icon"
+            />
+          </a>
         </div>
+      </div>
     </div>
 
     <script>
-        function hamburgerOpen() {
-            const mainContent = document.getElementById("main");
-            const headerContent = document.getElementById("header");
-            const mobileNavMenu = document.getElementById("mobile-nav-menu");
+      function hamburgerOpen() {
+        const mainContent = document.getElementById("main");
+        const headerContent = document.getElementById("header");
+        const mobileNavMenu = document.getElementById("mobile-nav-menu");
 
-            mainContent.style.display = "none";
-            headerContent.style.display = "none";
-            mobileNavMenu.style.display = "flex";
-        }
+        mainContent.style.display = "none";
+        headerContent.style.display = "none";
+        mobileNavMenu.style.display = "flex";
+      }
 
-        function hamburgerClose() {
-            const mainContent = document.getElementById("main");
-            const headerContent = document.getElementById("header");
-            const mobileNavMenu = document.getElementById("mobile-nav-menu");
+      function hamburgerClose() {
+        const mainContent = document.getElementById("main");
+        const headerContent = document.getElementById("header");
+        const mobileNavMenu = document.getElementById("mobile-nav-menu");
 
-            mainContent.style.display = "";
-            headerContent.style.display = "";
-            mobileNavMenu.style.display = "none";
-        }
+        mainContent.style.display = "";
+        headerContent.style.display = "";
+        mobileNavMenu.style.display = "none";
+      }
     </script>
 
-
-
     <main id="main">
-        <div class="performance-intro">
-            <h1>Past Performances</h1>
-            <p>
-                Below is a list of all our past performances.
-                Recordings are linked where available.
-            </p>
+      <div class="performance-intro">
+        <h1>Past Performances</h1>
+        <p>
+          Below is a list of all our past performances. Recordings are linked
+          where available.
+        </p>
+      </div>
+
+      <!-- 2025 -->
+      <div class="performance-section">
+        <h2>2025</h2>
+        <div class="gallery-container">
+          <div class="gallery-item">
+            <a
+              href="https://www.youtube.com/watch?v=hJYvL0VuPR0"
+              target="_blank"
+              rel="noopener"
+            >
+              <img src="../assets/performances/2025/boba_ballers_2025.jpg" />
+              <h3>Intercollegiate Lion Dance Competition: Boba Ballers</h3>
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a
+              href="https://www.youtube.com/watch?v=nTIt-zLuM2A"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="../assets/performances/2025/boston_tea_party_2025.jpg"
+              />
+              <h3>Intercollegiate Lion Dance Competition: Boston Tea Party</h3>
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a
+              href="https://www.youtube.com/watch?v=0nmVHVe4v7I"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="../assets/performances/2025/kendall_open.jpg"
+              />
+              <h3>Lunar New Year - Kendall/MIT Open Space</h3>
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a
+              href="https://www.youtube.com/watch?v=CPwoiw9uv0c"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="../assets/performances/2025/hunnewell.png"
+              />
+              <h3>Lunar New Year - Hunnewell Elementary School</h3>
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a
+              href="https://www.youtube.com/watch?v=0nmVHVe4v7I"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="../assets/performances/2025/kendall_open.jpg"
+              />
+              <h3>Lunar New Year - Kendall/MIT Open Space</h3>
+            </a>
+          </div>
         </div>
+      </div>
 
-        <!--2024-->
-        <div class="performance-section">
-            <h2>2024</h2>
-            <div class="gallery-container">
-                <div class="gallery-item">
-                    <a href="https://www.youtube.com/watch?v=a4ubIqdz8yw" target="_blank" rel="noopener">
-                        <img src="../assets/performances/2024/adt_fall_2024.jpg">
-                        <h3>ADT Fall Showcase: Rain</h3>
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="https://www.youtube.com/watch?v=m5mkNntCWCg" target="_blank" rel="noopener">
-                        <img src="../assets/performances/2024/adt_spring_2024.jpg">
-                        <h3>ADT Spring Showcase: Lovesick</h3>
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="https://www.youtube.com/watch?v=V7XAW6GDisw" target="_blank" rel="noopener">
-                        <img src="../assets/performances/2024/cpw_closing_2024.jpg">
-                        <h3>CPW Closing Performance</h3>
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="https://www.youtube.com/watch?v=yfaewbvIi8M" target="_blank" rel="noopener">
-                        <img src="../assets/performances/2024/cpw_midway_2024.jpg">
-                        <h3>CPW Activities Midway</h3>
-                    </a>
-                </div>
-            </div>
+      <!--2024-->
+      <div class="performance-section">
+        <h2>2024</h2>
+        <div class="gallery-container">
+          <div class="gallery-item">
+            <a
+              href="https://www.youtube.com/watch?v=a4ubIqdz8yw"
+              target="_blank"
+              rel="noopener"
+            >
+              <img src="../assets/performances/2024/adt_fall_2024.jpg" />
+              <h3>ADT Fall Showcase: Rain</h3>
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a
+              href="https://www.youtube.com/watch?v=m5mkNntCWCg"
+              target="_blank"
+              rel="noopener"
+            >
+              <img src="../assets/performances/2024/adt_spring_2024.jpg" />
+              <h3>ADT Spring Showcase: Lovesick</h3>
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a
+              href="https://www.youtube.com/watch?v=V7XAW6GDisw"
+              target="_blank"
+              rel="noopener"
+            >
+              <img src="../assets/performances/2024/cpw_closing_2024.jpg" />
+              <h3>CPW Closing Performance</h3>
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a
+              href="https://www.youtube.com/watch?v=yfaewbvIi8M"
+              target="_blank"
+              rel="noopener"
+            >
+              <img src="../assets/performances/2024/cpw_midway_2024.jpg" />
+              <h3>CPW Activities Midway</h3>
+            </a>
+          </div>
         </div>
-
-
+      </div>
     </main>
-</body>
+  </body>
 </html>
