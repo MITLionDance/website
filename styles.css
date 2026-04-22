@@ -48,7 +48,6 @@ body::before {
 }
 
 main {
-    /* removed positioning below for announcement box */
     position: absolute;
     top: 40vh;
     transform: translateY(-50%);
@@ -281,25 +280,27 @@ header {
 /* mobile nav bar [end] */
 
 /* announcement box [start] */
-/* .announcement-container {
+ .announcement-container {
+    position: absolute;
+    bottom: 5vh;
     width: 60vw;
     border-radius: 30px;
     background-color: #9a0000;
     padding: 1vh 1vw;
-    visibility: hidden;
+    z-index: 1;
 }
 
 .announcement-container p a {
     color: #ffd700;
-} */
+} 
 
-/* h2 {
+ h2 {
     font-size: 2rem;
 }
 
 p {
     font-size: 1.1rem;
-} */
+} 
 /* announcement box [end] */
 
 
@@ -317,9 +318,9 @@ p {
         font-size: 4rem;
     }
 
-    /* .announcement-container {
+    .announcement-container {
         width: 90vw;
-    } */
+    }
 }
 
 @media (min-width: 900px) {
