@@ -282,12 +282,12 @@ header {
 /* announcement box [start] */
  .announcement-container {
     position: absolute;
-    bottom: 5vh;
+    top: 100%;
+    margin-top: 5vh;
     width: 60vw;
     border-radius: 30px;
     background-color: #9a0000;
     padding: 1vh 1vw;
-    z-index: 1;
 }
 
 .announcement-container p a {

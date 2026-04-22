@@ -191,22 +191,26 @@
     <script>
       function hamburgerOpen() {
         const mainContent = document.getElementById("main");
+        const announceContent = document.getElementsByClassName("announcement-container")[0];
         const headerContent = document.getElementById("header");
         const mobileNavMenu = document.getElementById("mobile-nav-menu");
 
         mainContent.style.display = "none";
         headerContent.style.display = "none";
-        mobileNavMenu.style.display = "flex";
+       	announceContent.style.display = "none";
+	mobileNavMenu.style.display = "flex";
       }
 
       function hamburgerClose() {
         const mainContent = document.getElementById("main");
+        const announceContent = document.getElementsByClassName("announcement-container")[0];
         const headerContent = document.getElementById("header");
         const mobileNavMenu = document.getElementById("mobile-nav-menu");
 
         mainContent.style.display = "";
         headerContent.style.display = "";
-        mobileNavMenu.style.display = "none";
+        announceContent.style.display = "";
+	mobileNavMenu.style.display = "none";
       }
     </script>
 
@@ -220,19 +224,19 @@
         class="main-button"
         >Book A Performance</a
       >
+      <div class="announcement-container">
+          <h2>Announcement!</h2>
+          <p>
+              Our Annual Showcase Performance is <strong>4/26 at Walker Memorial starting at 2pm</strong>
+          </p>
+          <p>
+              If you can't make it, tune in to our <a href="livestream/" target="_blank" rel="noopener">livestream</a>
+          </p>
+          <p>
+              Also, please fill out our <a href="attendance/" target="_blank" rel="noopener">attendance form</a>
+          </p>
+      </div>
     </main>
 
-    <div class="announcement-container">
-        <h2>Announcement!</h2>
-        <p>
-            Our Annual Showcase Performance is <strong>4/26 at Walker Memorial starting at 2pm</strong>
-        </p>
-        <p>
-            If you can't make it, tune in to our <a href="livestream/" target="_blank" rel="noopener">livestream</a>
-        </p>
-        <p>
-            Also, please fill out our <a href="attendance/" target="_blank" rel="noopener">attendance form</a>
-        </p>
-    </div>
   </body>
 </html>
